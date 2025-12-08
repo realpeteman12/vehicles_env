@@ -8,6 +8,7 @@ car_data = pd.read_csv('vehicles_us.csv')
 st.header('Análisis de Datos de Vehículos')
 
 hist_button = st.button('Construir histograma', key='hist_btn')
+scatter_button = st.button('Construir gráfico de dispersión', key='scatter_btn')
 
 if hist_button:
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
@@ -19,4 +20,3 @@ if scatter_button:
     fig = px.scatter(car_data, x="odometer", y="price")
     st.plotly_chart(fig, use_container_width=True)
 
-scatter_button = st.button('Construir gráfico de dispersión', key='scatter_btn')
